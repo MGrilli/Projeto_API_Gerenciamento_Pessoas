@@ -52,7 +52,7 @@ public class PersonService {
         Person updatedPerson = personMapper.toModel(personDTO);
         Person savedPerson = personRepository.save(updatedPerson);
 
-        MessageResponseDTO messageResponse = createMessageResponse("Person successfully updated with ID ", savedPerson.getId());
+        MessageResponseDTO messageResponse = createMessageResponse("ID de pessoa atualizado com sucesso! ", savedPerson.getId());
 
         return messageResponse;
     }
